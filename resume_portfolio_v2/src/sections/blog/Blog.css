@@ -1,0 +1,29 @@
+.blogSection {
+    /* border: 1px solid palevioletred; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 5vw;
+    
+}
+
+.blogCard{
+    padding: 10px 5px 5px 5px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    
+}
+
+.blogCard:hover {
+    text-decoration: underline;
+    /* box-shadow: 5px 5px 10px 1px black; */
+    /* background: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%);
+    background: linear-gradient(to right, #e3ffe7 0%, #d9e7ff 100%);
+    border-radius: 5px; */
+}
+
+
+.excerpt{
+    margin-left: 3vw;
+    /* margin-right: 3vw; */
+    font-family: Serif;
+}

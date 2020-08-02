@@ -1,0 +1,39 @@
+.blogStyle {
+    margin-top: 32px;
+    margin-left: 85px;
+    margin-right: 85px;
+}
+
+.content{
+    padding: 0 16px;
+    width: 85%;
+}
+
+
+.header {
+    margin-bottom: 1.5rem;
+}
+
+.directory {
+    display:inline-block;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 0;
+    padding:3px 10px;
+    -moz-transform: skewX(25deg);
+    -webkit-transform: skewX(25deg);
+    -o-transform: skewX(25deg);
+    -ms-transform: skewX(25deg);
+    transform: skewX(25deg);
+}
+
+.text {
+    display:inline-block;
+    border:0;
+    box-shadow: none;
+    -moz-transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+    -o-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}

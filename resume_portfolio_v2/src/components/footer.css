@@ -1,0 +1,26 @@
+.footer{
+  border-top: 1px solid gainsboro;
+}
+
+.aboutSection {
+    /* border: 1px solid powderblue; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    /* padding: 0 5vw; */
+}
+
+
+.line {
+    background-color: rgba(254,89,95,1.0);
+    height:4px;
+    opacity: 1.0;
+}
+
+.quote {
+   background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}

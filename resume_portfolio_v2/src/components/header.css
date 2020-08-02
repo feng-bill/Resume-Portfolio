@@ -1,0 +1,26 @@
+
+.navbar {
+    /* width: 100%; */
+    z-index: 5000;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.notice {
+    background-color: rgba(254,89,95,1.0);
+    float: right;
+    padding: 3px 3px;
+    /* position: relative; */
+}
+
+
+.logo{
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 20px;
+    opacity: 0.8;
+    /* position: relative; */
+}
