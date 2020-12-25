@@ -1,135 +1,144 @@
-@import '~@fortawesome/fontawesome-svg-core/styles.css';
-
+@import "~@fortawesome/fontawesome-svg-core/styles.css";
 
 .landing {
+  height: 100vh;
+  /* height: calc(100vh - 15em); */
+  /* background-color: floralwhite; */
+  background-image: url("../../images/lock.jpeg");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  object-fit: none;
+  /* object-position: 500px; */
+  /* background-size: contain; */
+  /* padding-top: 7em; */
+}
+
+.link {
+  /* color: #06c;
+  color: #66cc00; */
+  color: #cccc00;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: black;
+}
+
+.card {
+  position: relative;
+  top: 50%;
+  width: 50%;
+  margin: auto;
+  padding: 15px;
+  transform: translateY(-50%);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  position: relative;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 35%;
+}
+
+.name {
+  font-family: "Rammetto One";
+  padding-bottom: 30px;
+  font-size: 1.5em;
+}
+
+.subTitle {
+  font-size: 0.8em;
+}
+
+.pwcLogo {
+  position: absolute;
+  bottom: 5%;
+  width: 5em;
+  height: 5em;
+}
+
+.right {
+  font-family: "Open Sans";
+  float: right;
+  width: 65%;
+  padding-left: 2vw;
+}
+
+.contact {
+  /* position: absolute; */
+  bottom: 2vh;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -200%;
+  left: -100%;
+  /* margin-left: -50%; */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  /* top: 100%; */
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  .card {
+    background-color: #f5f5f5;
+    width: fit-content;
+    height: auto;
+    padding: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    align-content: center;
+    text-align: left;
+  }
+
+  .landing {
     height: 100vh;
-    /* height: calc(100vh - 15em); */
-    /* background-color: floralwhite; */
-    background-image: url('../../images/lock.jpeg');
+    background-image: url("../../images/lock.jpeg");
     background-position-x: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: 100% auto;
     object-fit: none;
     /* object-position: 500px; */
     /* background-size: contain; */
     /* padding-top: 7em; */
-}
-
-.card {
-    position: relative;
-    top: 50%;
-    width: 35em;
-    margin: auto;
-    padding: 15px;
-    transform: translateY(-50%);
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    background-color: #f5f5f5;
-    text-align: left;
-}
-
-
-
-.row {
-    display: flex;
-    position: relative;
-}
-
-.column {
-    float: left;
-    padding: 10px;
-}
-
-.left {
-    width: 35%;
-}
-
-.name {
-    font-family: 'Rammetto One';
-    padding-bottom: 30px;
-    font-size: 1.5em;
-}
-
-.subTitle {
-    font-size: 0.8em;
-}
-
-.image {
-    padding-top: 50px;
-    width: 5em;
-    height: 5em;
-}
-
-.right {
-    font-family: 'Open Sans';
-    float: right;
-    width: 65%;
-    padding-left: 2vw;
-}
-
-.contact {
-    position: absolute;
-    bottom: 2vh;
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: fit-content;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: -200%;
-    left: -100%;
-    /* margin-left: -50%; */
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    /* top: 100%; */
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #555 transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-    .card {
-        background-color: #f5f5f5;
-        width: fit-content;
-        height: auto;
-        padding: 15px;
-        border: 2px solid rgba(0, 0, 0, 0.2);
-        align-content: center;
-        text-align: left;
-    }
-
-    .landing {
-        height: 100vh;
-        background-image: url('../../images/lock.jpeg');
-        background-position-x: center;
-        background-repeat: repeat-y;
-        background-size: 100% auto;
-        object-fit: none;
-        /* object-position: 500px; */
-        /* background-size: contain; */
-        /* padding-top: 7em; */
-    }
+  }
 }

@@ -5,13 +5,18 @@ import resume from "./Bill_Feng_Resume.pdf"
 import "./Card.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilePdf, faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import { faLinkedin} from "@fortawesome/free-brands-svg-icons"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 const Card = () => {
-
-  const mail = <FontAwesomeIcon icon={faEnvelope} size="lg" pull="left" className="icon" />
-  const pdf = <FontAwesomeIcon icon={faFilePdf} size="lg" pull="left" className="icon" />
-  const linkedin = <FontAwesomeIcon icon={faLinkedin} size="lg" pull="left" className="icon"/>
+  const mail = (
+    <FontAwesomeIcon icon={faEnvelope} size="lg" pull="left" className="icon" />
+  )
+  const pdf = (
+    <FontAwesomeIcon icon={faFilePdf} size="lg" pull="left" className="icon" />
+  )
+  const linkedin = (
+    <FontAwesomeIcon icon={faLinkedin} size="lg" pull="left" className="icon" />
+  )
 
   return (
     <section className="landing">
@@ -23,26 +28,33 @@ const Card = () => {
               Bill Feng <br />
             </span>
             <span className="subTitle">
-              GRC - Risk Management
+              Enterprise GRC Enablement
               <br />{" "}
             </span>
-            <span className="subTitle">IT Aduit Assurance</span>
+            <span className="subTitle">San Francisco</span>
             <div>
-              <img src={pwc} className="image" alt="PwC Logo" />
+              <a href="https://www.pwc.com/us/en/services/risk-assurance/digital-risk-solutions/integrated-digital-governance-risk-compliance.html">
+                <img src={pwc} className="pwcLogo" alt="PwC Logo" />
+              </a>
             </div>
           </div>
           <div className="column right">
             <div>
-              I work as a technology consultant helping businesses to achieve
-              their strategic goals through&nbsp;
-              <span>
-                <a href="https://www.mckinsey.com/business-functions/organization/our-insights/unlocking-success-in-digital-transformations">
-                  <u>Digital Transformation</u>
-                </a>
-              </span>
-              &nbsp;in
-              <i> The Fourth Industrial Revolution</i>.<br />
+              I am a Governance Risk and Compliance consultant. I am driven to
+              help organizations to reliably achieve their strategic goals,
+              address uncertainties, and act with integrities.
             </div>
+            <p>
+              Enabling you through a system of{" "}
+              <a
+                className="link"
+                href="https://cio-wiki.org/wiki/Leavitt%27s_Alignment_Model"
+              >
+                People, Process, and Technology
+              </a>
+              .Providing greater risk transparency and visibility for a
+              better-governed organization.
+            </p>
             <div className="contact">
               <h5>
                 <u>
