@@ -1,12 +1,10 @@
 import React from "react"
-import './footer.css'
+import "./footer.css"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons"
 
-
 export default () => {
-
   const info = (
     <FontAwesomeIcon
       icon={faInfoCircle}
@@ -17,7 +15,8 @@ export default () => {
   return (
     <div className="footer">
       <div className="aboutSection">
-        <h2>
+        ©Bill Feng 2020
+        {/* <h2>
           {info}
           This site and me
         </h2>
@@ -28,8 +27,8 @@ export default () => {
           Hopefully, I can provide some value to you.
         </div>
       </div>
-      <div className="line"></div>
+      <div className="line"></div> */}
+      </div>
     </div>
   )
 }
-
