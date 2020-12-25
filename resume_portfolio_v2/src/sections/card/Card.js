@@ -52,14 +52,17 @@ const Card = () => {
               >
                 People, Process, and Technology
               </a>
-              .Providing greater risk transparency and visibility for a
+              . Providing greater risk transparency and visibility for a
               better-governed organization.
             </p>
             <div className="contact">
               <h5>
                 <u>
-                  <a href="https://hbswk.hbs.edu/item/the-business-case-for-becoming-a-jack-of-all-trades">
-                    The world needs more generalist
+                  <a
+                    className="link"
+                    href="https://hbswk.hbs.edu/item/the-business-case-for-becoming-a-jack-of-all-trades"
+                  >
+                    Bringing the whole stacks to the table
                   </a>
                 </u>
               </h5>
