@@ -1,0 +1,51 @@
+html {
+  font-family: "Open Sans", "Serif", "Times";
+  /* background: linear-gradient(135deg, #e3ffe7 0%, #d9e7ff 100%); */
+  background-color: #f5f5f5;
+  /* background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%); */
+  /* background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%); */
+
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+body {
+  margin: 0px 0px;
+  padding: 0px;
+  background-image: url("./assets/background.jpg");
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+b {
+  font-weight: 900;
+}
+
+/* .icon:hover { 
+    text-decoration: none;
+    background-color: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+    background-position: right center;
+ } */
+
+hr {
+  width: 75%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  size: 0.5px;
+  box-shadow: none;
+}
+
+/* .backgroundImage {
+  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} */

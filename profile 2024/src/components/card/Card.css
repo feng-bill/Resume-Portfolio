@@ -1,0 +1,139 @@
+/* @import "~@fortawesome/fontawesome-svg-core/styles.css"; */
+
+.cardSection {
+  height: 100vh;
+  height: calc(100vh - 15em);
+  object-fit: none;
+  object-position: 500px;
+  background-size: contain;
+  /* padding-top: 7em; */
+  /* background-color: floralwhite; */
+}
+
+
+.link:hover {
+  color: black;
+}
+
+.card {
+  position: relative;
+  top: 50%;
+  width: 70%;
+  margin: auto;
+  padding: 15px;
+  transform: translateY(-50%);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: #c7b182;
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  position: relative;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 35%;
+}
+
+.name {
+  font-family: "Rammetto One";
+  padding-bottom: 30px;
+  font-size: 1.5em;
+}
+
+.subTitle {
+  font-size: 0.9em;
+  font-family: "Open Sans";
+}
+
+.certifications {
+  font-family: "Open Sans";
+  padding-bottom: 30px;
+  font-size: 0.9em;
+  position: fixed;
+  bottom: 2vh;
+  width: 30%;
+  /* width: 20; */
+  /* height: 20ch; */
+}
+
+.right {
+  font-family: "Open Sans";
+  float: right;
+  width: 65%;
+  padding-left: 2vw;
+}
+
+.contact {
+  /* position: absolute; */
+  bottom: 2vh;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -200%;
+  left: -100%;
+  /* margin-left: -50%; */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  /* top: 100%; */
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  .card {
+    background-color: #c7b182;
+    width: fit-content;
+    height: auto;
+    padding: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    align-content: center;
+    text-align: left;
+  }
+
+  .landing {
+    height: 100vh;
+    background-image: url("../../assets/background.jpg");
+    background-position-x: center;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    object-fit: none;
+    /* object-position: 500px; */
+    /* background-size: contain; */
+    /* padding-top: 7em; */
+  }
+}
