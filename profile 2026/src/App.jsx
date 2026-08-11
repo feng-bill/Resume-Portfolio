@@ -1,39 +1,116 @@
 const strengths = [
   {
-    title: 'IRM Program Delivery',
+    title: 'IRM Transformation & Delivery',
     description:
-      'Driving implementations from discovery through design, build, testing, and adoption with a steady focus on business outcomes.',
+      'Guiding IRM initiatives from roadmap and design through implementation and adoption, with a focus on sustainable business outcomes.',
   },
   {
-    title: 'ServiceNow Enablement',
+    title: 'Solution & Platform Enablement',
     description:
-      'Turning platform capabilities into practical workflows that support risk, policy, issue management, and operational clarity.',
+      'Translating risk and compliance needs into practical, scalable solutions, with deep experience enabling IRM through ServiceNow.',
   },
   {
-    title: 'Cross-Functional Translation',
+    title: 'Business & Technology Alignment',
     description:
-      'Working across stakeholders to connect regulatory needs, technical constraints, and day-to-day user experience.',
+      'Connecting business, regulatory, and technical stakeholders to navigate priorities, make informed decisions, and move programs forward.',
   },
 ]
 
 const highlights = [
-  '5+ years of IRM implementation experience',
-  'Primary focus on ServiceNow delivery',
-  'Enterprise programs with process and adoption in mind',
+  '5+ years delivering IRM transformations',
+  'Bridging business, process, and technology',
+  'Turning complexity into practical solutions',
 ]
 
 const certifications = [
-  'ServiceNow CIS Implementor',
-  'OneTrust Privacy Professional',
-  'Associate Project Manager',
+  {
+    title: 'ServiceNow CIS - R&C Implementor',
+    logo: 'servicenow',
+  },
+  {
+    title: 'OneTrust Privacy Professional',
+    logo: 'onetrust',
+  },
+  {
+    title: 'Certified Associate Product Manager',
+    logo: 'pmp',
+  },
+  {
+    title: 'Certified Scrum Product Owner',
+    logo: 'scrumalliance',
+  },
 ]
 
-function App() {
-  return (
-    <div className="page-shell">
-      <div className="aurora aurora-left" aria-hidden="true" />
-      <div className="aurora aurora-right" aria-hidden="true" />
+function CertificationLogo({ type }) {
+  if (type === 'servicenow') {
+    return (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="24" fill="#19a974" />
+        <text x="24" y="28" textAnchor="middle" fill="#ffffff" fontSize="12" fontWeight="700">
+          now
+        </text>
+      </svg>
+    )
+  }
 
+  if (type === 'onetrust') {
+    return (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="24" fill="#0f4c81" />
+        <circle cx="24" cy="24" r="11" fill="none" stroke="#ffffff" strokeWidth="4" />
+        <path
+          d="M24 5a19 19 0 0 1 0 38"
+          fill="none"
+          stroke="#9fd2ff"
+          strokeWidth="4"
+          strokeLinecap="round"
+        />
+      </svg>
+    )
+  }
+
+  if (type === 'pmp') {
+    return (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="4" y="6" width="40" height="36" rx="10" fill="#246b57" />
+        <text x="24" y="29" textAnchor="middle" fill="#f5d06f" fontSize="14" fontWeight="800">
+          PMP
+        </text>
+      </svg>
+    )
+  }
+
+  return (
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="24" fill="#f26b3a" />
+      <path
+        d="M15 24c0-5.2 4.1-9.4 9.2-9.4 3.8 0 7.1 2.3 8.5 5.7"
+        fill="none"
+        stroke="#ffffff"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M33 24c0 5.2-4.1 9.4-9.2 9.4-3.8 0-7.1-2.3-8.5-5.7"
+        fill="none"
+        stroke="#ffd7bf"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+function App() {
+  const handleEmailClick = () => {
+    const user = ['bill', '21223'].join('')
+    const domain = ['gmail', 'com'].join('.')
+
+    window.location.href = `mailto:${user}@${domain}`
+  }
+
+  return (
+    <div>
       <header className="site-header">
         <a className="brand" href="#top">
           Bill Feng
@@ -46,24 +123,29 @@ function App() {
       </header>
 
       <main id="top">
-        <section className="hero">
+        
+
+        <section className="hero section" id="about">
           <div className="hero-copy">
-            <p className="eyebrow">IRM implementation | ServiceNow delivery | San Francisco</p>
-            <h3>
-              I help organizations turn risk and compliance goals into working
-              systems people can actually use.
-            </h3>
+            {/* <p className="section-kicker">About</p> */}
+            <h2>About</h2>
             <p className="hero-text">
-              I am a Risk and Compliance solution implementor 
-              who advocate for customer at every stage of their technology enablement journey.
-              With over 5 years of IRM implementation experience, primarily focused on ServiceNow, 
-              I combine technical excellence and customer sympathy, helping organization achive transformational outcome. 
+              Bill has over five years of experience delivering Integrated Risk Management and GRC initiatives, 
+              with a focus on ServiceNow-enabled transformation. He has extensive experience delivering solutions across 
+              the implementation lifecycle, 
+              working with cross-functional teams from requirements and solution design through development, testing, 
+              deployment, and adoption. He combines strong technical expertise with an understanding of business 
+              processes to translate complex risk and regulatory requirements into practical, scalable solutions.
             </p>
 
             <div className="hero-actions">
-              <a className="button button-primary" href="mailto:bill21223@gmail.com">
+              <button
+                className="button button-primary"
+                type="button"
+                onClick={handleEmailClick}
+              >
                 Email Me
-              </a>
+              </button>
               <a
                 className="button button-secondary"
                 href="https://www.linkedin.com/in/billwfeng/"
@@ -74,6 +156,7 @@ function App() {
               </a>
             </div>
           </div>
+          
 
           <aside className="hero-panel">
             <p className="panel-label">What I bring</p>
@@ -82,38 +165,35 @@ function App() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <p className="panel-note">
-              Built for people, guided by process, and enabled by technology.
-            </p>
+            
           </aside>
         </section>
-
-        <section className="section" id="about">
-          <div className="section-heading">
-            <p className="section-kicker">About</p>
-            <h2>Practical delivery for complex environments</h2>
-          </div>
-          <div className="about-grid">
-            <p>
-              My background is centered on helping teams stand up and mature
-              integrated risk capabilities with clarity and momentum. I enjoy
-              translating broad governance requirements into delivery plans,
-              usable workflows, and decisions that keep programs moving.
+<section className="section irm-section">
+          <div className="irm-card hero-copy hero-copy-intro">
+            <p className="eyebrow">
+              Integrated Risk Management | Technology Transformation | ServiceNow
             </p>
-            <p>
-              Across implementations, I have worked with cross-functional teams
-              to define needs, support solution design, demo proof-of-concepts,
-              coordinate delivery, and encourage adoption. The goal is not just
-              to launch a system, but to make it meaningful in the way people
-              operate.
+            <h2>
+              Built for people, guided by process, and enabled by technology.
+            </h2>
+            <p className="hero-text">
+              I&apos;m an Integrated Risk Management professional focused on
+              turning complex risk, compliance, and business requirements into
+              practical solutions that work at scale. With 5+ years of
+              experience delivering technology-enabled risk transformations, I
+              work across business and technical teams to shape roadmaps, guide
+              solution design, and move programs from discovery through
+              implementation and adoption. I believe successful transformation
+              requires more than technology - it comes from balancing business
+              needs, regulatory requirements, technical capabilities, and the
+              people who ultimately use the solution.
             </p>
           </div>
         </section>
-
         <section className="section" id="focus">
           <div className="section-heading">
             <p className="section-kicker">Focus</p>
-            <h2>Where I create value</h2>
+            <h2>What I focus</h2>
           </div>
           <div className="card-grid">
             {strengths.map((item) => (
@@ -128,12 +208,15 @@ function App() {
         <section className="section credentials">
           <div className="section-heading">
             <p className="section-kicker">Credentials</p>
-            <h2>Certifications and professional grounding</h2>
+            <h2>Certifications</h2>
           </div>
           <div className="credential-row">
             {certifications.map((item) => (
-              <div className="credential-chip" key={item}>
-                {item}
+              <div className="credential-chip" key={item.title}>
+                <span className={`credential-logo credential-logo-${item.logo}`}>
+                  <CertificationLogo type={item.logo} />
+                </span>
+                <span>{item.title}</span>
               </div>
             ))}
           </div>
@@ -142,16 +225,20 @@ function App() {
         <section className="section closing" id="contact">
           <div className="closing-card">
             <p className="section-kicker">Contact</p>
-            <h2>Looking for a thoughtful implementation partner?</h2>
+            <h2>Building the next stage of your risk transformation?</h2>
             <p>
-              If you are shaping or strengthening an IRM program, I would be
-              glad to connect and talk through where process, platform, and
-              delivery can better support the outcome.
+              If you are shaping or strengthening an IRM program, 
+              I would be glad to connect and talk through where process, platform,
+               and delivery can better support the outcome.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="mailto:bill21223@gmail.com">
-                bill21223@gmail.com
-              </a>
+              <button
+                className="button button-primary"
+                type="button"
+                onClick={handleEmailClick}
+              >
+                Start an Email
+              </button>
               <a
                 className="button button-secondary"
                 href="https://www.linkedin.com/in/billwfeng/"
